@@ -2,12 +2,11 @@ package com.example.consumer.channel;
 
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
-import org.springframework.cloud.stream.messaging.Sink;
 
-@EnableBinding(Sink.class)
+@EnableBinding(InboundChannels.class)
 public class ConsumerInstance {
 	
-	@StreamListener(Sink.INPUT)
+	@StreamListener(InboundChannels.CHANNEL1)
 	public void consumerMessage(String message) {
 		System.out.println("Consuming :" + message);
 	}
