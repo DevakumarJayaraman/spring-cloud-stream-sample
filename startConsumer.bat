@@ -1,0 +1,1 @@
+java -jar D:\spring-cloud-stream-sample\consumer-service\target\consumer-service-0.0.1-SNAPSHOT.jar
