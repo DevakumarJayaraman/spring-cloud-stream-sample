@@ -4,7 +4,6 @@ import java.util.Date;
 
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MimeTypeUtils;
@@ -18,10 +17,11 @@ public class ScheduledProducer {
 		this.messagingChannels = messagingChannels;
 	}
 
-	@Scheduled(fixedDelay = 5000)
+	@Scheduled(fixedDelay = 1000)
 	public void execute() {
-		System.out.println("publishing message");
-		messagingChannels.channel1().send(MessageBuilder.withPayload(new Date())
+		String message= new Date().getTime()+"";
+		System.out.println("publishing message :" + message);
+		messagingChannels.channel1().send(MessageBuilder.withPayload(message)
 				.setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON).build());
 	}
 }

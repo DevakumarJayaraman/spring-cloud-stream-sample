@@ -1,1 +1,1 @@
-java -jar D:\spring-cloud-stream-sample\target\producer-service\producer-service-0.0.1-SNAPSHOT.jar
+java -jar D:\spring-cloud-stream-sample\producer-service\target\producer-service-0.0.1-SNAPSHOT.jar
