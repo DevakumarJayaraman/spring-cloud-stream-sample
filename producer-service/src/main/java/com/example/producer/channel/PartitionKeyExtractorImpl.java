@@ -5,7 +5,7 @@ import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
 @Component("partitionKeyExtractor")
-public class PartitionKeyExtractorStrategyImpl implements PartitionKeyExtractorStrategy {
+public class PartitionKeyExtractorImpl implements PartitionKeyExtractorStrategy {
 	int MAX_PARTITION = 10;
 	int partitionCounter = 0;
 
